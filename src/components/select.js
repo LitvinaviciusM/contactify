@@ -16,7 +16,7 @@ const Select = ({
       <option value="placeholder" disabled hidden>{placeholder}</option>
     )}
     { options.map(o => (
-      <option value={o.value}>{o.text}</option>
+      <option key={o.value} value={o.value}>{o.text}</option>
     ))}
   </select>
 );

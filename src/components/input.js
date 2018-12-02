@@ -7,6 +7,7 @@ const Input = ({
   onChange,
   placeholder,
   type,
+  value,
 }) => (
   <Fragment>
     <input
@@ -16,6 +17,7 @@ const Input = ({
       onChange={onChange}
       placeholder={placeholder}
       type={type}
+      value={value}
     />
     {label && (
       <label htmlFor={name}>{label}</label>

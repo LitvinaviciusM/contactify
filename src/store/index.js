@@ -1,10 +1,11 @@
 import { createStore, combineReducers } from 'redux';
 
-import { contacts, contactProfile } from '../features/contacts/reducers';
+import { contacts, filter, profile } from '../features/contacts/reducers';
 
 const reducers = combineReducers({
   contacts,
-  contactProfile,
+  filter,
+  profile,
 });
 
 const store = createStore(

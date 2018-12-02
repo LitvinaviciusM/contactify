@@ -3,11 +3,12 @@ import Input from '../../../components/input';
 import Select from '../../../components/select';
 import Button from '../../../components/button';
 
-const Filter = ({ cityOptions }) => (
+const Filter = ({ cityOptions, setFilterValue }) => (
   <div>
     <Input
       className="input input--text input--rounded"
       name="name"
+      onChange={e => setFilterValue('name', e.target.value)}
       placeholder="Name"
       type="text"
     />
@@ -15,21 +16,23 @@ const Filter = ({ cityOptions }) => (
       className="input input--select input--rounded"
       name="city"
       options={cityOptions}
+      onChange={e => setFilterValue('city', e.target.value)}
       placeholder="City"
     />
     <Input
       className="input input--checkbox"
       label="Show active"
       name="active"
+      onChange={e => setFilterValue('active', e.target.checked)}
       type="checkbox"
     />
     <Button
-      className="btn"
+      className="btn btn--round"
       type="button"
       value="Filter"
     />
     <Button
-      className="btn"
+      className="btn btn--round"
       type="button"
       value="ADD NEW"
     />

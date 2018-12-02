@@ -1,9 +1,8 @@
 import React from 'react';
 import Table from '../../components/table';
-import { contacts as columns } from '../../utils/columns';
-
 import ContactProfile from './components/contactprofile';
 import Filter from './components/filter';
+import { getCitiesOptions, getTableColumns } from './utils';
 
 class Contacts extends React.Component {
   componentDidMount = () => {
@@ -21,14 +20,17 @@ class Contacts extends React.Component {
   };
 
   render() {
-    const { contacts, contactProfile } = this.props;
+    const { contacts, profile, setFilterValue } = this.props;
 
     return (
       <div>
-        <Filter cityOptions={[]} />
-        <ContactProfile {...contactProfile ? contactProfile : {}} />
+        <Filter
+          cityOptions={getCitiesOptions(contacts)}
+          setFilterValue={setFilterValue}
+        />
+        <ContactProfile {...profile ? profile : {}} />
         <Table
-          columns={columns}
+          columns={getTableColumns()}
           data={contacts}
           minRows={0}
           showPagination={false}

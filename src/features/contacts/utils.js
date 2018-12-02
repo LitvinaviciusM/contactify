@@ -1,6 +1,7 @@
 import React from 'react';
+import { uniqBy } from 'lodash';
 
-export const contacts = [
+export const getTableColumns = () => ([
   {
     Cell: () => (
       <span>
@@ -82,4 +83,18 @@ export const contacts = [
     ),
     accessor: 'id',
   }
-];
+]);
+
+/**
+ * Filters out unique contacts by city and maps them to options array
+ * @param contacts
+ * @returns {{value: string, text: string}[]}
+ */
+export const getCitiesOptions = contacts => uniqBy(contacts, 'city').map(c => ({
+  value: c.city,
+  text: c.city,
+}));
+
+export const getFilteredComponents = (contacts, filter) => {
+  return contacts;
+};
