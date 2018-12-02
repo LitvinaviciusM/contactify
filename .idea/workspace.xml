@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c6001c-403c-4879-a8d5-e2a2d3274226" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/roundimage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/components/contactprofile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/components/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/reducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/contacts/screen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/contacts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/contacts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/contacts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/contacts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/contacts/components/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/contacts/components/filter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,11 +76,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/contacts/screen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/features/contacts/components/filter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,13 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/contacts/components/filter.js">
+        <entry file="file://$PROJECT_DIR$/src/components/button.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -117,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="225">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -126,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/select.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -167,10 +162,11 @@
         <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/features/contacts/container.js" />
         <option value="$PROJECT_DIR$/src/features/contacts/components/contactprofile.js" />
+        <option value="$PROJECT_DIR$/src/features/contacts/screen.js" />
+        <option value="$PROJECT_DIR$/src/components/button.js" />
         <option value="$PROJECT_DIR$/src/components/input.js" />
         <option value="$PROJECT_DIR$/src/components/select.js" />
         <option value="$PROJECT_DIR$/src/features/contacts/components/filter.js" />
-        <option value="$PROJECT_DIR$/src/features/contacts/screen.js" />
       </list>
     </option>
   </component>
@@ -195,33 +191,6 @@
               <item name="contactify" type="b2602c69:ProjectViewProjectNode" />
               <item name="contactify" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contactify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contactify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contactify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="contacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contactify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contactify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="contacts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,12 +239,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543671681850</updated>
-      <workItem from="1543671684475" duration="15143000" />
+      <workItem from="1543671684475" duration="16454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15143000" />
+    <option name="totallyTimeSpent" value="16454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -438,30 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/select.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/contacts/components/filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/contacts/components/contactprofile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -471,8 +416,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/features/contacts/screen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/contacts/components/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

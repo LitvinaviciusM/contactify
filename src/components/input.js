@@ -18,7 +18,7 @@ const Input = ({
       type={type}
     />
     {label && (
-      <label for={name}>{label}</label>
+      <label htmlFor={name}>{label}</label>
     )}
   </Fragment>
 );
