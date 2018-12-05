@@ -3,7 +3,7 @@ import Input from '../../../components/input';
 import Select from '../../../components/select';
 import Button from '../../../components/button';
 
-const Filter = ({ cityOptions, setFilterValue }) => (
+const Filter = ({ cityOptions, setFilterValue, filterContacts }) => (
   <div>
     <Input
       className="input input--text input--rounded"
@@ -30,6 +30,7 @@ const Filter = ({ cityOptions, setFilterValue }) => (
       className="btn btn--round"
       type="button"
       value="Filter"
+      onClick={filterContacts}
     />
     <Button
       className="btn btn--round"

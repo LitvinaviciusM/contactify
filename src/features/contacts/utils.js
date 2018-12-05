@@ -90,11 +90,7 @@ export const getTableColumns = () => ([
  * @param contacts
  * @returns {{value: string, text: string}[]}
  */
-export const getCitiesOptions = contacts => uniqBy(contacts, 'city').map(c => ({
+export const getCityOptions = contacts => uniqBy(contacts, 'city').map(c => ({
   value: c.city,
   text: c.city,
 }));
-
-export const getFilteredComponents = (contacts, filter) => {
-  return contacts;
-};

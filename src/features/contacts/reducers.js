@@ -4,6 +4,8 @@ export const contacts = (state = [], action) => {
   switch (action.type) {
     case contactsActionTypes.INIT_CONTACTS:
       return action.payload;
+    case contactsActionTypes.FILTER_OUT_CONTACTS:
+      return action.payload;
     default:
       return state;
   }
@@ -20,12 +22,30 @@ export const profile = (state = {}, action) => {
   }
 };
 
-export const filter = (state = {}, action) => {
+const initialFilterState = {
+  values: {},
+  params: {
+    cityOptions: [],
+  },
+};
+
+export const filter = (state = initialFilterState, action) => {
   switch (action.type) {
+    case contactsActionTypes.INIT_CONTACTS_FILTER:
+      return {
+        ...state,
+        params: {
+          ...state.params,
+          cityOptions: action.payload,
+        }
+      };
     case contactsActionTypes.SET_CONTACTS_FILTER:
       return {
         ...state,
-        [action.payload.field]: action.payload.value,
+        values: {
+          ...state.values,
+          [action.payload.field]: action.payload.value,
+        }
       };
     default:
       return state;

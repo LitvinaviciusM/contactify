@@ -12,6 +12,7 @@ const Select = ({
     name={name}
     onChange={onChange}
   >
+    <option value=""> </option>
     { placeholder && (
       <option value="placeholder" disabled hidden>{placeholder}</option>
     )}
