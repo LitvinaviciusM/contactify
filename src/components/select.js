@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Select = ({
+  input,
   className,
   name,
   onChange,
@@ -8,13 +9,10 @@ const Select = ({
   placeholder,
 }) => (
   <select
-    defaultValue={placeholder && 'placeholder'}
-    name={name}
-    onChange={onChange}
+    {...input}
   >
-    <option value=""> </option>
     { placeholder && (
-      <option value="placeholder" disabled hidden>{placeholder}</option>
+      <option value="" disabled hidden>{placeholder}</option>
     )}
     { options.map(o => (
       <option key={o.value} value={o.value}>{o.text}</option>

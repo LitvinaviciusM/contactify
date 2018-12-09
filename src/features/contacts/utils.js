@@ -1,15 +1,12 @@
 import React from 'react';
 import { uniqBy } from 'lodash';
 
+/**
+ * An array of columns passed to the table. Header - column header; Cell - column data, accessor -
+ * property of object key to display
+ * @returns {*[]}
+ */
 export const getTableColumns = () => ([
-  {
-    Cell: () => (
-      <span>
-        Active/Inactive
-      </span>
-    ),
-    accessor: 'id',
-  },
   {
     Header: () => (
       <span>
@@ -86,7 +83,7 @@ export const getTableColumns = () => ([
 ]);
 
 /**
- * Filters out unique contacts by city and maps them to options array
+ * Filters out unique contacts by city and maps them to city options array
  * @param contacts
  * @returns {{value: string, text: string}[]}
  */

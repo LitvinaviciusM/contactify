@@ -1,26 +1,22 @@
 import React, { Fragment } from 'react';
 
 const Input = ({
+  input,
   className,
   label,
-  name,
-  onChange,
   placeholder,
   type,
-  value,
 }) => (
   <Fragment>
     <input
+      {...input}
       className={className}
-      id={name}
-      name={name}
-      onChange={onChange}
+      id={input.name}
       placeholder={placeholder}
       type={type}
-      value={value}
     />
     {label && (
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={input.name}>{label}</label>
     )}
   </Fragment>
 );

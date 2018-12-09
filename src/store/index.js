@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { reducer as form } from 'redux-form';
 import thunk from 'redux-thunk';
 import { contacts, filter, profile } from '../features/contacts/reducers';
 
@@ -6,6 +7,7 @@ const reducers = combineReducers({
   contacts,
   filter,
   profile,
+  form,
 });
 
 const store = createStore(

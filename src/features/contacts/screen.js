@@ -19,21 +19,32 @@ class Contacts extends React.Component {
     }
   };
 
+  onFilterSubmit = values => {
+    const { filterContacts } = this.props;
+
+    filterContacts(values);
+  };
+
+
   render() {
     const {
       contacts,
       profile,
-      setFilterValue,
-      filterContacts,
       cityOptions,
+      resetFilter,
     } = this.props;
 
     return (
       <div>
         <Filter
           cityOptions={cityOptions}
-          setFilterValue={setFilterValue}
-          filterContacts={filterContacts}
+          onSubmit={this.onFilterSubmit}
+          initialValues={{
+            city: '',
+            name: '',
+            active: false,
+          }}
+          resetFilter={resetFilter}
         />
         <ContactProfile {...profile ? profile : {}} />
         <Table

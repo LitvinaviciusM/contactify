@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
-
+import { reset } from 'redux-form';
 import Contacts from './screen';
 import {
   initContacts,
   selectContact,
-  setFilterValue,
   filterContacts,
 } from './actions';
 
@@ -17,8 +16,11 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   initContacts: () => dispatch(initContacts()),
   selectContact: id => dispatch(selectContact(id)),
-  setFilterValue: (field, value) => dispatch(setFilterValue(field, value)),
-  filterContacts: () => dispatch(filterContacts()),
+  filterContacts: values => dispatch(filterContacts(values)),
+  resetFilter: () => {
+    dispatch(reset('filter'));
+    dispatch(filterContacts({}));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contacts);

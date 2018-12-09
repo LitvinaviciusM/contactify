@@ -39,14 +39,6 @@ export const filter = (state = initialFilterState, action) => {
           cityOptions: action.payload,
         }
       };
-    case contactsActionTypes.SET_CONTACTS_FILTER:
-      return {
-        ...state,
-        values: {
-          ...state.values,
-          [action.payload.field]: action.payload.value,
-        }
-      };
     default:
       return state;
   }

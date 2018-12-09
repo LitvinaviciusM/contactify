@@ -2,8 +2,7 @@ import { contactsActionTypes } from '../../common/constants';
 import { getContacts, getFilteredContacts } from '../../common/storage';
 import { getCityOptions } from './utils';
 
-export const filterContacts = () => async (dispatch, getState) => {
-  const { filter: { values } } = getState();
+export const filterContacts = values => async dispatch => {
   const result = await getFilteredContacts(values);
 
   if (result.status === 200) {
@@ -21,7 +20,3 @@ export const initContacts = () => async dispatch => {
 };
 
 export const selectContact = id => ({ type: contactsActionTypes.SELECT_CONTACT, payload: id });
-export const setFilterValue = (field, value) => ({
-  type: contactsActionTypes.SET_CONTACTS_FILTER,
-  payload: {field, value},
-});
