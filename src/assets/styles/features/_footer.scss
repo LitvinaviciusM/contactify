@@ -1,0 +1,42 @@
+.footer {
+  background-image: linear-gradient(to right, $c-sea-blue-2, $c-dark-blue-2);
+  display: flex;
+  justify-content: space-between;
+
+  .nav-panel {
+
+  }
+
+  .utility-panel {
+    .block {
+      align-items: center;
+      background-color: $c-dark-blue-3;
+      display: flex;
+      height: 50%;
+
+      &:first-child {
+        margin-bottom: 1px;
+      }
+
+      &__icon {
+        height: 30px;
+        margin: 0 24px;
+        width: 40px;
+
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &__main {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .menu-panel {
+
+  }
+}

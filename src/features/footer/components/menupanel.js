@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MenuPanel = () => (
-  <section>
+  <section className="menu-panel">
     <ul>
       <li>Groups</li>
       <li>Frequently contacted</li>

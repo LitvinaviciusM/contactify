@@ -6,6 +6,7 @@ import Header from './features/header/container';
 import Footer from './features/footer/container';
 import Contacts from './features/contacts/container';
 import { initStore } from './common/storage';
+import './assets/styles/main.scss';
 
 class App extends Component {
   componentDidMount() {
@@ -16,11 +17,11 @@ class App extends Component {
     return (
       <Provider store={store}>
         <FaProvider>
-          <Fragment>
+          <div className="app">
             <Header />
             <Contacts />
             <Footer />
-          </Fragment>
+          </div>
         </FaProvider>
       </Provider>
     );

@@ -7,14 +7,16 @@ const UtilityBlock = ({
   data,
   sync,
 }) => (
-  <div>
-    <FontAwesomeIcon icon={icon} />
-    <div>
+  <div className="block">
+    <div className="block__icon">
+      <FontAwesomeIcon icon={icon} />
+    </div>
+    <div className="block__main">
       <span>{label}</span>
       <span>{data}</span>
     </div>
     {sync && (
-      <button type="button">
+      <button className="btn btn--link" type="button">
         <FontAwesomeIcon icon="sync-alt" />
         <span>Force sync</span>
       </button>

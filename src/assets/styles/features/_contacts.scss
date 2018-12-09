@@ -1,0 +1,9 @@
+.contacts {
+  background-image: linear-gradient(to right, $c-sea-blue, $c-dark-blue);
+
+  &__filter {
+    display: flex;
+    height: 6vh;
+    width: 100%;
+  }
+}

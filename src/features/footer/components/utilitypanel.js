@@ -2,7 +2,7 @@ import React from 'react';
 import UtilityBlock from './utilityblock';
 
 const UtilityPanel = ({ lastSynced }) => (
-  <section>
+  <section className="utility-panel">
     <UtilityBlock
       icon="cloud-upload-alt"
       label="Last synced:"

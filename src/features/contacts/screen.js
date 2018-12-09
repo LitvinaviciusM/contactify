@@ -35,7 +35,7 @@ class Contacts extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="contacts">
         <Filter
           cityOptions={cityOptions}
           onSubmit={this.onFilterSubmit}

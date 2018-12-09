@@ -7,7 +7,7 @@ const ContactProfile = ({
   phone,
   surname,
 }) => (
-  <section>
+  <section className="">
     <span>
       {name}
     </span>

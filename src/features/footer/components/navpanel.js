@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const NavPanel = () => (
-  <section>
+  <section className="nav-panel">
     <ul>
       <li>Dashboards</li>
       <li>Contacts</li>

@@ -9,7 +9,10 @@ const Filter = ({
   handleSubmit,
   resetFilter,
 }) => (
-  <form onSubmit={handleSubmit}>
+  <form
+    onSubmit={handleSubmit}
+    className="contacts__filter"
+  >
     <Field
       component={Input}
       className="input input--text input--rounded"
