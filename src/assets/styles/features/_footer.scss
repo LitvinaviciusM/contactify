@@ -1,7 +1,6 @@
 .footer {
   background-image: linear-gradient(to right, $c-sea-blue-2, $c-dark-blue-2);
   display: flex;
-  justify-content: space-between;
 
   .nav-panel {
 
@@ -13,6 +12,7 @@
       background-color: $c-dark-blue-3;
       display: flex;
       height: 50%;
+      padding: 0 24px;
 
       &:first-child {
         margin-bottom: 1px;
@@ -20,7 +20,7 @@
 
       &__icon {
         height: 30px;
-        margin: 0 24px;
+        margin-right: 24px;
         width: 40px;
 
         svg {
@@ -32,6 +32,10 @@
       &__main {
         display: flex;
         flex-direction: column;
+      }
+
+      .btn {
+        margin-left: auto;
       }
     }
   }
