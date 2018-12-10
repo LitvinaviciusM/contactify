@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { uniqBy } from 'lodash';
 
 /**
@@ -15,6 +16,11 @@ export const getTableColumns = () => ([
     ),
     Cell: row => (
       <span>
+        {row.original.active ? (
+          <FontAwesomeIcon icon="eye" />
+        ) : (
+          <FontAwesomeIcon icon="eye-slash" />
+        )}
         {row.value}
       </span>
     ),
@@ -75,7 +81,8 @@ export const getTableColumns = () => ([
   {
     Cell: () => (
       <span>
-        Edit/Delete
+        <FontAwesomeIcon icon="pencil-alt" />
+        <FontAwesomeIcon icon="trash-alt" />
       </span>
     ),
     accessor: 'id',

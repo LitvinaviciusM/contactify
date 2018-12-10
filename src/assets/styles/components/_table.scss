@@ -1,0 +1,20 @@
+.ReactTable {
+  background-color: $c-white;
+  border-radius: 10px;
+  color: $c-dark-grey;
+  flex: 1;
+  margin-top: $l-leading * 1.5;
+
+  .rt-table {
+    .rt-thead {
+      height: 40px;
+    }
+
+    .rt-tbody {
+      .rt-tr-group {
+        cursor: pointer;
+        height: 40px;
+      }
+    }
+  }
+}

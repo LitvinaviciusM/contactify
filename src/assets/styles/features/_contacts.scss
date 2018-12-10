@@ -9,6 +9,7 @@
   }
 
   &__main {
+    align-items: stretch;
     display: flex;
 
     .sheet {
@@ -16,7 +17,7 @@
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      margin: $l-gutter;
+      margin: $l-leading * 1.5 $l-gutter 0;
 
       &__image-wrapper {
         height: 180px;
@@ -43,12 +44,15 @@
         }
 
         .value {
-          color: $c-dark-grey;
           flex: 1;
-          max-width: 100px;
+          width: 140px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+
+          &:not(a) {
+            color: $c-dark-grey;
+          }
         }
       }
     }

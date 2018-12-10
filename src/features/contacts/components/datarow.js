@@ -6,7 +6,7 @@ const DataRow = ({ label, value, link }) => (
       {label}:
     </label>
     {link ? (
-      <a href={`mailto:${value}`}>
+      <a className="value" href={`mailto:${value}`}>
         {value}
       </a>
     ) : (
