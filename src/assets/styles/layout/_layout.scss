@@ -1,0 +1,11 @@
+.inner {
+  padding: $l-leading * 1.5 $l-gutter * 3;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: $ff-base;
+  justify-content: stretch;
+}

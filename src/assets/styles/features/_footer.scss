@@ -3,7 +3,35 @@
   display: flex;
 
   .nav-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    &__navigation {
+      display: flex;
+      flex-direction: column;
+
+      .nav-item {
+        font-size: $fs-small;
+        margin-bottom: $l-leading / 2;
+      }
+    }
+
+    &__secondary {
+      display: flex;
+
+      .copyright {
+        font-size: $fs-small;
+        margin-right: $l-gutter;
+      }
+
+      .help {
+        .nav-item {
+          font-size: $fs-small;
+          margin-right: $l-leading;
+        }
+      }
+    }
   }
 
   .utility-panel {
@@ -11,8 +39,8 @@
       align-items: center;
       background-color: $c-dark-blue-3;
       display: flex;
-      height: 50%;
-      padding: 0 24px;
+      height: 49.5%;
+      padding: 0 $l-gutter * 1.5;
 
       &:first-child {
         margin-bottom: 1px;
@@ -20,27 +48,39 @@
 
       &__icon {
         height: 30px;
-        margin-right: 24px;
+        margin-right: $l-gutter * 1.5;
         width: 40px;
 
         svg {
-          height: 100%;
-          width: 100%;
+         height: 100%;
+         width: 100%;
         }
       }
 
       &__main {
+        font-size: $fs-medium;
         display: flex;
         flex-direction: column;
       }
 
-      .btn {
+      &__action {
+        font-size: $fs-medium;
         margin-left: auto;
       }
     }
   }
 
   .menu-panel {
+    padding: $l-leading * 1.5 $l-gutter * 1.5;
 
+    .navigation {
+      display: flex;
+      flex-direction: column;
+
+      .nav-item {
+        font-size: $fs-small;
+        margin-bottom: $l-leading / 2;
+      }
+    }
   }
 }

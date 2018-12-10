@@ -2,12 +2,12 @@ import React from 'react';
 
 const MenuPanel = () => (
   <section className="menu-panel">
-    <ul>
-      <li>Groups</li>
-      <li>Frequently contacted</li>
-      <li>Preferences</li>
-      <li>Log out</li>
-    </ul>
+    <nav className="navigation">
+      <a className="nav-item" href="/">Groups</a>
+      <a className="nav-item" href="/">Frequently contacted</a>
+      <a className="nav-item" href="/">Preferences</a>
+      <a className="nav-item" href="/">Log out</a>
+    </nav>
   </section>
 );
 

@@ -16,10 +16,11 @@ const UtilityBlock = ({
       <span>{data}</span>
     </div>
     {sync && (
-      <button className="btn btn--link" type="button">
+      <nav className="block__action">
         <FontAwesomeIcon icon="sync-alt" />
-        <span>Force sync</span>
-      </button>
+        &nbsp;
+        <a href="/">Force sync</a>
+      </nav>
     )}
   </div>
 );

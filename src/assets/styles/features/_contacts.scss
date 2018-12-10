@@ -1,5 +1,6 @@
 .contacts {
   background-image: linear-gradient(to right, $c-sea-blue, $c-dark-blue);
+  flex: 1;
 
   &__filter {
     display: flex;
