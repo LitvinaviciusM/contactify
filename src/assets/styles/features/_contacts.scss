@@ -7,4 +7,50 @@
     height: 6vh;
     width: 100%;
   }
+
+  &__main {
+    display: flex;
+
+    .sheet {
+      background-color: $c-white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      margin: $l-gutter;
+
+      &__image-wrapper {
+        height: 180px;
+        margin: 0 auto $l-leading;
+        width: 180px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      &__row {
+        display: flex;
+        font-size: $fs-xsmall;
+        font-weight: 600;
+        margin-bottom: $l-leading;
+
+        label {
+          color: $c-grey;
+          margin-right: $l-gutter / 2;
+          text-align: right;
+          width: 60px;
+        }
+
+        .value {
+          color: $c-dark-grey;
+          flex: 1;
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }

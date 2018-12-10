@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from '../../components/table';
-import ContactProfile from './components/contactprofile';
+import DataSheet from './components/datasheet';
 import Filter from './components/filter';
 import { getTableColumns } from './utils';
 
@@ -35,7 +35,7 @@ class Contacts extends React.Component {
     } = this.props;
 
     return (
-      <div className="contacts">
+      <div className="contacts inner">
         <Filter
           cityOptions={cityOptions}
           onSubmit={this.onFilterSubmit}
@@ -46,14 +46,16 @@ class Contacts extends React.Component {
           }}
           resetFilter={resetFilter}
         />
-        <ContactProfile {...profile ? profile : {}} />
-        <Table
-          columns={getTableColumns()}
-          data={contacts}
-          minRows={0}
-          showPagination={false}
-          getTrProps={this.setTrProps}
-        />
+        <div className="contacts__main">
+          <DataSheet {...profile ? profile : {}} />
+          <Table
+            columns={getTableColumns()}
+            data={contacts}
+            minRows={0}
+            showPagination={false}
+            getTrProps={this.setTrProps}
+          />
+        </div>
       </div>
     );
   }

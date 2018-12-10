@@ -1,5 +1,9 @@
 .inner {
   padding: $l-leading * 1.5 $l-gutter * 3;
+
+  &--small {
+    padding: $l-space * 2;
+  }
 }
 
 .app {
