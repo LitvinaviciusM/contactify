@@ -1,0 +1,36 @@
+.icon-wrapper {
+  &--search {
+    align-items: center;
+    background-color: $c-light-grey;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    padding: 0 10px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    svg {
+      path {
+        fill: $c-dark-grey;
+      }
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  border-radius: 30px;
+
+  ::placeholder {
+    padding-left: $l-gutter * 1.5;
+  }
+
+  &--search {
+    width: 180px;
+  }
+}

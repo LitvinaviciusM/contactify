@@ -5,7 +5,7 @@ import Search from './components/search';
 import ProfileMenu from './components/profilemenu'
 
 const Header = () => (
-  <div className="header">
+  <div className="header inner">
     <Logo />
     <Navigation />
     <Search />

@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -12,5 +16,15 @@ ul {
 nav {
   a {
     color: $c-white;
+  }
+}
+
+input {
+  border: 0;
+  font-size: $fs-xxsmall;
+  padding: $l-space;
+
+  &:focus {
+    outline: none;
   }
 }

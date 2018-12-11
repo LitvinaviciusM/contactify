@@ -1,24 +1,34 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Input = ({
   input,
-  className,
   label,
   placeholder,
   type,
+  onChange,
+  name,
+  icon,
+  iconClassName,
+  variant,
 }) => (
-  <Fragment>
+  <div className={`input-wrapper input-wrapper--${variant}`}>
     <input
-      {...input}
-      className={className}
-      id={input.name}
+      {...input ? input : { onChange, name }}
+      className={`input input--${variant}`}
+      id={input ? input.name : name}
       placeholder={placeholder}
       type={type}
     />
+    {icon && (
+      <div className={`icon-wrapper icon-wrapper--${variant}`}>
+        <FontAwesomeIcon className={`input input--${variant}`} icon={icon} />
+      </div>
+    )}
     {label && (
       <label htmlFor={input.name}>{label}</label>
     )}
-  </Fragment>
+  </div>
 );
 
 export default Input;

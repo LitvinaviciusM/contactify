@@ -9,6 +9,14 @@ import {
   faEyeSlash,
   faPencilAlt,
   faTrashAlt,
+  faSearch,
+  faUserAlt,
+  faCaretDown,
+  faCaretUp,
+  faUsers,
+  faComments,
+  faWrench,
+  faPowerOff,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faCloudUploadAlt);
@@ -19,6 +27,14 @@ library.add(faEye);
 library.add(faEyeSlash);
 library.add(faPencilAlt);
 library.add(faTrashAlt);
+library.add(faSearch);
+library.add(faUserAlt);
+library.add(faCaretDown);
+library.add(faCaretUp);
+library.add(faUsers);
+library.add(faComments);
+library.add(faWrench);
+library.add(faPowerOff);
 
 const FaProvider = ({ children }) => (
   <Fragment>

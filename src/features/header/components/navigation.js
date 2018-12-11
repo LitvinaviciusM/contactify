@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Navigation = () => (
-  <section>
-    <nav>
-      <a href="/">Dashboard</a>
-      <a href="/">Contacts</a>
-      <a href="/">Notifications</a>
+  <section className="header__navigation">
+    <nav className="panel">
+      <a className="nav-item nav-item--left" href="/">DASHBOARD</a>
+      <a className="nav-item nav-item--mid nav-item--active" href="/">CONTACTS</a>
+      <a className="nav-item nav-item--right" href="/">NOTIFICATIONS</a>
     </nav>
   </section>
 );

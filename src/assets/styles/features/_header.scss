@@ -1,4 +1,110 @@
 .header {
   background-color: $c-dark-green;
   display: flex;
+
+  &__logo {
+    position: relative;
+    width: 256px;
+
+    &--name {
+      font-size: $fs-large;
+    }
+
+    &--badge {
+      height: 11px;
+      left: 148px;
+      position: absolute;
+      top: -8px;
+
+      @include multiplier(1) {
+        width: 11px;
+      }
+    }
+  }
+
+  &__navigation {
+    width: 570px;
+
+    .panel {
+      display: flex;
+
+      .nav-item {
+        background-color: $c-light-blue-2;
+        border: 1px solid $c-light-blue-2;
+        font-size: $fs-xxsmall;
+        font-weight: 600;
+        padding: $l-leading / 2 $l-gutter * 3;
+        text-decoration: none;
+
+        &--left {
+          border-bottom-left-radius: 30px;
+          border-top-left-radius: 30px;
+        }
+
+        &--right {
+          border-bottom-right-radius: 30px;
+          border-top-right-radius: 30px;
+        }
+
+        &--active {
+          background-color: $c-sea-blue-3;
+        }
+
+        &:not(.nav-item--active):hover {
+          background-color: lighten($c-sea-blue-3, 15%);
+        }
+      }
+    }
+  }
+
+  &__profile-menu {
+    background-color: $c-light-blue-2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    font-size: $fs-xsmall;
+    justify-content: space-between;
+    padding: $l-space;
+    position: absolute;
+    right: 48px;
+    top: 0;
+
+    .display-name {
+      margin: 0 $l-gutter / 2;
+    }
+
+    .menu-popup {
+      background-color: $c-light-blue-2;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      position: absolute;
+      right: 0;
+      top: 46px;
+
+      .menu-item {
+        display: flex;
+        font-size: $fs-xxsmall;
+        align-items: center;
+        padding: $l-space;
+
+        &__name {
+          margin-left: $l-gutter / 2;
+          white-space: nowrap;
+        }
+      }
+
+      &::after {
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $c-light-blue-2;
+        position: absolute;
+        top: -10px;
+        right: 15px;
+      }
+    }
+  }
 }
