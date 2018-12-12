@@ -5,6 +5,8 @@ import Filter from './components/filter';
 import { getTableColumns } from './utils';
 
 class Contacts extends React.Component {
+  state = {};
+
   componentDidMount = () => {
     const { initContacts } = this.props;
 
@@ -30,6 +32,7 @@ class Contacts extends React.Component {
 
 
   render() {
+    const { loading } = this.state;
     const {
       contacts,
       profile,
@@ -57,6 +60,7 @@ class Contacts extends React.Component {
             minRows={0}
             showPagination={false}
             getTrProps={this.setTrProps}
+            loading={loading}
           />
         </div>
       </div>

@@ -23,7 +23,6 @@ export const profile = (state = {}, action) => {
 };
 
 const initialFilterState = {
-  values: {},
   params: {
     cityOptions: [],
   },

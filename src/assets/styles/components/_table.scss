@@ -1,14 +1,16 @@
 .ReactTable {
   $radius: 10px;
   $size: 25px;
-  $height: 40px;
+  $height: 42px;
 
   background-color: $c-white;
   border-radius: $radius;
   border: transparent;
   color: $c-dark-grey;
   flex: 1;
+  height: fit-content;
   margin-top: $l-leading * 1.5;
+  min-height: 90px;
 
   .rt-resizable-header {
     box-shadow: none;

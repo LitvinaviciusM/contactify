@@ -5,7 +5,7 @@ import { uniqBy } from 'lodash';
 /**
  * An array of columns passed to the table. Header - column header; Cell - column data, accessor -
  * property of object key to display
- * @returns {*[]}
+ * @returns {[]}
  */
 export const getTableColumns = id => ([
   {

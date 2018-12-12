@@ -8,6 +8,7 @@ const Table = ({
   getTrProps,
   minRows,
   showPagination,
+  loading,
 }) => (
   <ReactTable
     columns={columns}
@@ -15,6 +16,9 @@ const Table = ({
     getTrProps={getTrProps}
     minRows={minRows}
     showPagination={showPagination}
+    loadingText="Loading..."
+    noDataText= "No contacts found"
+    loading={loading}
   />
 );
 
