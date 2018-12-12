@@ -8,6 +8,7 @@ const Filter = ({
   cityOptions,
   handleSubmit,
   resetFilter,
+  pristine,
 }) => (
   <form
     onSubmit={handleSubmit}
@@ -39,12 +40,14 @@ const Filter = ({
       className="btn btn--transparent btn--round"
       type="submit"
       value="FILTER"
+      disabled={pristine}
     />
     <Button
       className="btn btn--transparent btn--round"
       type="button"
       value="RESET"
       onClick={resetFilter}
+      disabled={pristine}
     />
     <Button
       className="btn btn--green btn--round"

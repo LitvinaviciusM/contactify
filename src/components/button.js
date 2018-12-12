@@ -16,7 +16,7 @@ const Button = ({
     )}
     <button
       className={className}
-      disable={disabled}
+      disabled={disabled}
       onClick={onClick}
       type={type}
     >
@@ -26,7 +26,7 @@ const Button = ({
 ) : (
   <button
     className={className}
-    disable={disabled}
+    disabled={disabled}
     onClick={onClick}
     type={type}
   >

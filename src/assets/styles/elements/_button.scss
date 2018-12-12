@@ -11,7 +11,7 @@
   //       disabled bg color, disabled border color, disabled text color,
   //       hover bg color, hover border color, hover text color,
   $variants: (
-    transparent: (transparent, $c-grey, $c-white, transparent, $c-grey, $c-white, transparent, $c-grey, $c-grey),
+    transparent: (transparent, $c-grey, $c-white, transparent, $c-grey, $c-grey, transparent, $c-grey, $c-grey),
     green: ($c-green, $c-green, $c-white, $c-green, $c-green, $c-white, lighten($c-green, 5%), lighten($c-green, 5%), $c-white),
   );
 
