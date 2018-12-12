@@ -15,34 +15,35 @@ const Filter = ({
   >
     <Field
       component={Input}
-      className="input input--text input--rounded"
       name="name"
       placeholder="Name"
       type="text"
+      variant="filter-name"
     />
     <Field
       component={Select}
-      className="input input--select input--rounded"
       name="city"
       options={cityOptions}
       placeholder="City"
+      variant="filter-city"
+      icon="caret-down"
     />
     <Field
       component={Input}
-      className="input input--checkbox"
       label="Show active"
       name="active"
       type="checkbox"
+      variant="filter-active"
     />
     <Button
-      className="btn btn--round"
+      className="btn btn--transparent btn--round"
       type="submit"
-      value="Filter"
+      value="FILTER"
     />
     <Button
-      className="btn btn--round"
+      className="btn btn--transparent btn--round"
       type="button"
-      value="Reset"
+      value="RESET"
       onClick={resetFilter}
     />
   </form>

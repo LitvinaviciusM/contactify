@@ -1,0 +1,49 @@
+.btn {
+  cursor: pointer;
+
+  &--round {
+    border-radius: 30px;
+  }
+
+  // Variants
+  // keys: bg color, border color, text color,
+  //       disabled bg color, disabled border color, disabled text color,
+  //       hover bg color, hover border color, hover text color,
+  $variants: (
+    transparent: (transparent, $c-sea-blue, $c-white, transparent, $c-sea-blue, $c-white, transparent, $c-sea-blue, $c-sea-blue),
+  );
+
+  // Variants
+  @each $variant in $variants {
+    $variantKey: nth($variant, 1);
+    $variantValues: nth($variant, 2);
+    $variantBgColor: nth($variantValues, 1);
+    $variantBorderColor: nth($variantValues, 2);
+    $variantTextColor: nth($variantValues, 3);
+    $variantDisabledBgColor: nth($variantValues, 4);
+    $variantDisabledBorderColor: nth($variantValues, 5);
+    $variantDisabledTextColor: nth($variantValues, 6);
+    $variantHoverBgColor: nth($variantValues, 7);
+    $variantHoverBorderColor: nth($variantValues, 8);
+    $variantHoverTextColor: nth($variantValues, 9);
+
+    &--#{$variantKey} {
+      transition: background-color ease 0.3s, border-color ease 0.3s;
+      background-color: $variantBgColor;
+      border: 2px solid $variantBorderColor;
+      color: $variantTextColor;
+
+      &:hover {
+        background-color: $variantHoverBgColor;
+        border: 2px solid $variantHoverBorderColor;
+        color: $variantHoverTextColor;
+      }
+
+      &:disabled {
+        background-color: $variantDisabledBgColor;
+        border-color: $variantDisabledBorderColor;
+        color: $variantDisabledTextColor;
+      }
+    }
+  }
+}

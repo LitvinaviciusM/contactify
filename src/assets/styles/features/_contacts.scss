@@ -6,6 +6,14 @@
     display: flex;
     height: 6vh;
     width: 100%;
+
+    .btn {
+      font-size: $fs-xxsmall;
+      font-weight: 600;
+      height: 35px;
+      margin: 0 $l-gutter / 2;
+      padding: $l-leading / 2 $l-gutter * 2;
+    }
   }
 
   &__main {

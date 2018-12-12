@@ -1,3 +1,35 @@
+.input-wrapper {
+  position: relative;
+
+  &--filter-name {
+    margin-right: $l-gutter;
+  }
+
+  &--filter-active {
+    align-items: center;
+    display: flex;
+    font-size: $fs-xxsmall;
+    height: 33px;
+    margin-right: $l-gutter;
+  }
+}
+
+.input {
+  border-radius: 30px;
+
+  ::placeholder {
+    padding-left: $l-gutter * 1.5;
+  }
+
+  &--search {
+    width: 180px;
+  }
+
+  &--filter-name {
+    min-width: 224px;
+  }
+}
+
 .icon-wrapper {
   &--search {
     align-items: center;
@@ -16,21 +48,5 @@
         fill: $c-dark-grey;
       }
     }
-  }
-}
-
-.input-wrapper {
-  position: relative;
-}
-
-.input {
-  border-radius: 30px;
-
-  ::placeholder {
-    padding-left: $l-gutter * 1.5;
-  }
-
-  &--search {
-    width: 180px;
   }
 }

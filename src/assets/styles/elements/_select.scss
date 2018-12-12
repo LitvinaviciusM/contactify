@@ -1,0 +1,40 @@
+.select-wrapper {
+  position: relative;
+
+  &--filter-city {
+    background: $c-white;
+    border-radius: 30px;
+    display: flex;
+    height: 33px;
+    margin-right: $l-gutter;
+    min-width: 180px;
+    overflow: hidden;
+  }
+}
+
+.select {
+  cursor: pointer;
+
+  &--filter-city {
+    background: transparent;
+    width: 100%;
+  }
+}
+
+.icon-wrapper {
+  position: absolute;
+
+  &--filter-city {
+    background-color: $c-white;
+    position: absolute;
+    right: 4px;
+    top: 9px;
+    width: 15px;
+
+    svg {
+      path {
+        fill: $c-dark-grey;
+      }
+    }
+  }
+}

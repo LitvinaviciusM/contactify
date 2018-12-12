@@ -9,7 +9,6 @@ const Input = ({
   onChange,
   name,
   icon,
-  iconClassName,
   variant,
 }) => (
   <div className={`input-wrapper input-wrapper--${variant}`}>

@@ -28,3 +28,21 @@ input {
     outline: none;
   }
 }
+
+select {
+  border: 0;
+  font-size: $fs-xxsmall;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  padding: 0;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}

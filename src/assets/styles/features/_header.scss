@@ -92,6 +92,10 @@
           margin-left: $l-gutter / 2;
           white-space: nowrap;
         }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $c-grey-blue;
+        }
       }
 
       &::after {
