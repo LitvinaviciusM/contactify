@@ -1,20 +1,122 @@
 .ReactTable {
+  $radius: 10px;
+  $size: 25px;
+  $height: 40px;
+
   background-color: $c-white;
-  border-radius: 10px;
+  border-radius: $radius;
+  border: transparent;
   color: $c-dark-grey;
   flex: 1;
   margin-top: $l-leading * 1.5;
 
+  .rt-resizable-header {
+    box-shadow: none;
+  }
+
   .rt-table {
+    border-radius: $radius;
+
     .rt-thead {
-      height: 40px;
+      font-weight: 700;
+
+      .rt-tr {
+        height: $height;
+
+        .rt-th {
+          align-items: center;
+          border-right: none;
+          color: $c-white;
+          display: flex;
+          outline: none;
+          padding-left: $l-gutter * 1.5;
+
+          &:first-child {
+            padding-left: $l-gutter * 3;
+          }
+
+          $elements: 6;
+          @for $i from 0 to $elements {
+            &:nth-child(#{$i + 1}) {
+              background: lighten($c-sea-blue-3, $i * 8%);
+            }
+          }
+        }
+      }
     }
 
     .rt-tbody {
       .rt-tr-group {
         cursor: pointer;
-        height: 40px;
+        height: $height;
+
+        .rt-tr {
+          .rt-td {
+            align-items: center;
+            border-right: none;
+            display: flex;
+            padding-left: $l-gutter * 1.5;
+
+            &:first-child, &:last-child {
+              padding: 0;
+            }
+
+            .column {
+              &--first {
+                width: 100%;
+
+                svg {
+                  margin: 0 $l-gutter;
+                }
+              }
+
+              &--last {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                svg {
+                  &.highlited {
+                    background-color: $c-light-blue-2;
+                    border-radius: 6px;
+                    height: $size;
+                    padding: $l-space / 1.5;
+                    width: $size;
+
+                    path {
+                      fill: $c-white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
+  }
+
+  .rt-resizable-header {
+    @include multiplier(2) {
+      box-shadow: none;
+    }
+  }
+
+  .rt-resizer:before {
+    $size: 15px;
+    content: '';
+    height: $size;
+    position: absolute;
+    right: 30px;
+    top: 13px;
+    width: $size;
+  }
+
+  .rt-th.-sort-asc .rt-resizer:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABLElEQVQokZ2TsUpDURBEZ8NDQkhlYeUXpPQbrFJZ+AUWFgHBysJeLMXa1sYvCMQvsBFsRBArNRJRm5igROZYvGvyTN4DcW61l5mdu+zcQOi/yEpvUQa0JDUj4lKhjwre3IEasA5cAffAFpAt8ITmhZntNvBEgu0R0AEa1eLcsQ3csYhXoGO7vijOHTfTM7GN7aky1UNgD6jPxJABG8Bj4k5sDwquA9uT1GRoe/dnBAGrwHly+gTOgP2C+AQ4AkapvgXWEKpJepPUldSXdCppB3iZbgPGkg4kHUrqAz1JD7NVQQNoAcsI2d4uzHpse8l2s8hBpJCExpKuf+2fPHkRIUBRi/d5TmnCIqLYxKXpqhJLupHUk9SIiAtJX6UmpR8jH2clNX+uyna5+I/4Bh7Pe//IhT2mAAAAAElFTkSuQmCC);
+  }
+
+  .rt-th.-sort-desc .rt-resizer:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABJklEQVQokaWTsUoDQRCG/zlCCCFYWIhFaguxUEsrsbKw8gHEMohVSntL8QF8BB8hWNqaB0hnCglWIhEl8H8WuTN3516juyzLzv7/zOz+M4HQX0craUVtSX2gHRHPCn004H5P24fAIzC2fWY7S+Gyhoy2JB1I2o2IvaYMk+SIqGBq5yoZ0xXaFlr/eQ61j0S9OibDdCVdAA+SbjCbQCU6sCZpCIyAa8xGcdG3PQKw/WX7HrgiH7bvbN8C89w0sb2PkIDM9ontaQ5eALMSeQYsbAO8274EukuyEJABp4WDErG8vwFDoFNItVJt6eAYmBSEYgGvtge2O2Wdq7LnDmy/lKLPgUE5Ypq8cnAEjIEpcA60UhUWycZYVt6OpB7wFFl8JovpP131DeWlfFKYPGazAAAAAElFTkSuQmCC);
   }
 }

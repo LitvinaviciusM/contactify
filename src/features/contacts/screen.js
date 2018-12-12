@@ -12,10 +12,13 @@ class Contacts extends React.Component {
   };
 
   setTrProps = (state, rowInfo) => {
-    const { selectContact } = this.props;
+    const { selectContact, profile } = this.props;
 
     return {
       onClick: () => selectContact(rowInfo.original),
+      style: {
+        background: rowInfo.row.id === profile.id ? "#dcf9ff" : "white"
+      },
     }
   };
 
@@ -49,7 +52,7 @@ class Contacts extends React.Component {
         <div className="contacts__main">
           <DataSheet {...profile ? profile : {}} />
           <Table
-            columns={getTableColumns()}
+            columns={getTableColumns(profile && profile.id)}
             data={contacts}
             minRows={0}
             showPagination={false}

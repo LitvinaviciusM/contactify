@@ -7,7 +7,7 @@ import { uniqBy } from 'lodash';
  * property of object key to display
  * @returns {*[]}
  */
-export const getTableColumns = () => ([
+export const getTableColumns = id => ([
   {
     Header: () => (
       <span>
@@ -15,11 +15,11 @@ export const getTableColumns = () => ([
       </span>
     ),
     Cell: row => (
-      <span>
+      <span className="column column--first">
         {row.original.active ? (
-          <FontAwesomeIcon icon="eye" />
+          <FontAwesomeIcon icon="eye" className={id === row.original.id ? 'highlited' : ''} />
         ) : (
-          <FontAwesomeIcon icon="eye-slash" />
+          <FontAwesomeIcon icon="eye-slash" className={id === row.original.id ? 'highlited' : ''} />
         )}
         {row.value}
       </span>
@@ -79,13 +79,15 @@ export const getTableColumns = () => ([
     accessor: 'phone',
   },
   {
-    Cell: () => (
-      <span>
-        <FontAwesomeIcon icon="pencil-alt" />
-        <FontAwesomeIcon icon="trash-alt" />
+    Cell: row => (
+      <span className="column column--last">
+        <FontAwesomeIcon icon="pencil-alt" className={id === row.original.id ? 'highlited' : ''} />
+        <FontAwesomeIcon icon="trash-alt" className={id === row.original.id ? 'highlited' : ''} />
       </span>
     ),
     accessor: 'id',
+    width: 80,
+    sortable: false,
   }
 ]);
 
