@@ -7,6 +7,25 @@
     height: 6vh;
     width: 100%;
 
+    .btn-wrapper {
+      margin: 0 0 0 auto;
+      position: relative;
+
+      .btn {
+        margin: 0;
+        padding: $l-leading / 2 $l-gutter $l-leading / 2 $l-gutter * 2;
+      }
+
+      svg {
+        background-color: $c-dark-green-2;
+        border-radius: 50%;
+        left: 5px;
+        padding: $l-space / 2;
+        position: absolute;
+        top: 6px;
+      }
+    }
+
     .btn {
       font-size: $fs-xxsmall;
       font-weight: 600;

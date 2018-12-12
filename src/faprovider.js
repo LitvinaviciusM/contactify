@@ -17,6 +17,7 @@ import {
   faComments,
   faWrench,
   faPowerOff,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faCloudUploadAlt);
@@ -35,6 +36,7 @@ library.add(faUsers);
 library.add(faComments);
 library.add(faWrench);
 library.add(faPowerOff);
+library.add(faPlus);
 
 const FaProvider = ({ children }) => (
   <Fragment>

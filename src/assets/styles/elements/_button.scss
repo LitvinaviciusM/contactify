@@ -1,5 +1,6 @@
 .btn {
   cursor: pointer;
+  white-space: nowrap;
 
   &--round {
     border-radius: 30px;
@@ -10,7 +11,8 @@
   //       disabled bg color, disabled border color, disabled text color,
   //       hover bg color, hover border color, hover text color,
   $variants: (
-    transparent: (transparent, $c-sea-blue, $c-white, transparent, $c-sea-blue, $c-white, transparent, $c-sea-blue, $c-sea-blue),
+    transparent: (transparent, $c-grey, $c-white, transparent, $c-grey, $c-white, transparent, $c-grey, $c-grey),
+    green: ($c-green, $c-green, $c-white, $c-green, $c-green, $c-white, lighten($c-green, 5%), lighten($c-green, 5%), $c-white),
   );
 
   // Variants
@@ -28,14 +30,14 @@
     $variantHoverTextColor: nth($variantValues, 9);
 
     &--#{$variantKey} {
-      transition: background-color ease 0.3s, border-color ease 0.3s;
+      transition: background-color ease 0.3s, border-color ease 0.3s, color 0.3s ease;
       background-color: $variantBgColor;
-      border: 2px solid $variantBorderColor;
+      border: 1px solid $variantBorderColor;
       color: $variantTextColor;
 
       &:hover {
         background-color: $variantHoverBgColor;
-        border: 2px solid $variantHoverBorderColor;
+        border: 1px solid $variantHoverBorderColor;
         color: $variantHoverTextColor;
       }
 
@@ -43,6 +45,7 @@
         background-color: $variantDisabledBgColor;
         border-color: $variantDisabledBorderColor;
         color: $variantDisabledTextColor;
+        cursor: default;
       }
     }
   }

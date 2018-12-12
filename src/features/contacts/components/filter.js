@@ -46,6 +46,13 @@ const Filter = ({
       value="RESET"
       onClick={resetFilter}
     />
+    <Button
+      className="btn btn--green btn--round"
+      type="button"
+      value="ADD NEW CONTRACT"
+      onClick={resetFilter}
+      icon="plus"
+    />
   </form>
 );
 
