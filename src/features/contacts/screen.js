@@ -39,6 +39,7 @@ class Contacts extends React.Component {
       profile,
       cityOptions,
       resetFilter,
+      isFiltered,
     } = this.props;
 
     return (
@@ -52,6 +53,7 @@ class Contacts extends React.Component {
             active: false,
           }}
           resetFilter={resetFilter}
+          isFiltered={isFiltered}
         />
         <div className="contacts__main">
           <DataSheet {...profile ? profile : {}} />
@@ -77,6 +79,7 @@ Contacts.propTypes = {
   resetFilter: PropTypes.func,
   selectContact: PropTypes.func,
   initContacts: PropTypes.func,
+  isFiltered: PropTypes.bool,
 };
 
 export default Contacts;

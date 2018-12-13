@@ -8,6 +8,7 @@ export const initStore = () => {
 };
 
 export const getContacts = () => new Promise(resolve => {
+  // Faking server latency
   setTimeout(() => resolve({
     status: 200,
     response: JSON.parse(localStorage.getItem('contacts')),
@@ -34,6 +35,7 @@ const filterContacts = specs => {
 };
 
 export const getFilteredContacts = specs => new Promise(resolve => {
+  // Faking server latency
   setTimeout(() => resolve({
     status: 200,
     response: filterContacts(specs),

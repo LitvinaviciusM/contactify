@@ -10,6 +10,7 @@ const Filter = ({
   handleSubmit,
   resetFilter,
   pristine,
+  isFiltered,
 }) => (
   <form
     onSubmit={handleSubmit}
@@ -48,7 +49,7 @@ const Filter = ({
       type="button"
       value="RESET"
       onClick={resetFilter}
-      disabled={pristine}
+      disabled={!isFiltered}
     />
     <Button
       className="btn btn--green btn--round"
@@ -65,6 +66,7 @@ Filter.propTypes = {
   handleSubmit: PropTypes.func,
   resetFilter: PropTypes.func,
   pristine: PropTypes.bool,
+  isFiltered: PropTypes.bool,
 };
 
 export default reduxForm({

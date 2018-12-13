@@ -25,6 +25,7 @@ export const profile = (state = {}, action) => {
 const initialFilterState = {
   params: {
     cityOptions: [],
+    isFiltered: false,
   },
 };
 
@@ -37,6 +38,16 @@ export const filter = (state = initialFilterState, action) => {
           ...state.params,
           cityOptions: action.payload,
         }
+      };
+    case contactsActionTypes.FILTER_OUT_CONTACTS:
+      return {
+        ...state,
+        isFiltered: true,
+      };
+    case contactsActionTypes.RESET_CONTACTS_FILTER:
+      return {
+        ...state,
+        isFiltered: false,
       };
     default:
       return state;
