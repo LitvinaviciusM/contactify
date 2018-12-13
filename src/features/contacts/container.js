@@ -6,12 +6,14 @@ import {
   filterContacts,
   resetFilter,
 } from './actions';
+import { statusTypes } from '../../common/constants';
 
 const mapStateToProps = state => ({
   contacts: state.contacts,
   profile: state.profile,
   cityOptions: state.filter.params.cityOptions,
   isFiltered: state.filter.isFiltered,
+  isFetching: state.app.contacts.apiStatus === statusTypes[2],
 });
 
 const mapDispatchToProps = dispatch => ({

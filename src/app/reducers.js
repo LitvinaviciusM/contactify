@@ -1,10 +1,12 @@
-import { contactsActionTypes } from '../common/constants';
+import { contactsActionTypes, requestActionTypes, statusTypes } from '../common/constants';
 
 const initialAppState = {
   profile: {
     fullName: 'Jorah Mormont',
   },
-  contacts: {},
+  contacts: {
+    apiStatus: 'neutral',
+  },
 };
 
 export const app = (state = initialAppState, action) => {
@@ -16,6 +18,23 @@ export const app = (state = initialAppState, action) => {
           ...state.contacts,
           lastSynced: Date.now()
         },
+      };
+    case requestActionTypes.API_MOCK_REQUEST:
+      return {
+        ...state,
+        contacts: {
+          ...state.contacts,
+          apiStatus: statusTypes[2],
+        }
+      };
+    case requestActionTypes.API_MOCK_RESPONSE:
+    case requestActionTypes.API_MOCK_FAILURE:
+      return {
+        ...state,
+        contacts: {
+          ...state.contacts,
+          apiStatus: statusTypes[1],
+        }
       };
     default:
       return state;

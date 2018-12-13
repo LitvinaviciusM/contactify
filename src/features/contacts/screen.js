@@ -6,8 +6,6 @@ import Table from '../../components/table';
 import { getTableColumns } from './utils';
 
 class Contacts extends React.Component {
-  state = {};
-
   componentDidMount = () => {
     const { initContacts } = this.props;
 
@@ -33,13 +31,13 @@ class Contacts extends React.Component {
 
 
   render() {
-    const { loading } = this.state;
     const {
       contacts,
       profile,
       cityOptions,
       resetFilter,
       isFiltered,
+      isFetching,
     } = this.props;
 
     return (
@@ -63,7 +61,7 @@ class Contacts extends React.Component {
             minRows={0}
             showPagination={false}
             getTrProps={this.setTrProps}
-            loading={loading}
+            loading={isFetching}
           />
         </div>
       </div>
@@ -80,6 +78,7 @@ Contacts.propTypes = {
   selectContact: PropTypes.func,
   initContacts: PropTypes.func,
   isFiltered: PropTypes.bool,
+  isFetching: PropTypes.bool,
 };
 
 export default Contacts;
