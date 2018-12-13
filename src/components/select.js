@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Select = ({
+  icon,
   input,
   name,
   onChange,
   options,
   placeholder,
   variant,
-  icon,
 }) => (
   <div className={`select select--${variant}`}>
     <select
@@ -34,5 +35,15 @@ const Select = ({
     )}
   </div>
 );
+
+Select.propTypes = {
+  icon: PropTypes.string,
+  input: PropTypes.object,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.object),
+  placeholder: PropTypes.string,
+  variant: PropTypes.string,
+};
 
 export default Select;

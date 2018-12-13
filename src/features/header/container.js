@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
 import Header from './screen';
 
-const mapStateToProps = () => ({
-  // Different header layout for authorised users. This property would be used later
-  isAuthorised: true,
+const mapStateToProps = state => ({
+  fullName: state.app.profile.fullName,
 });
 
 export default connect(mapStateToProps)(Header);

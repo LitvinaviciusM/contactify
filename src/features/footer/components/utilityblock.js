@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const UtilityBlock = ({
+  data,
   icon,
   label,
-  data,
   sync,
 }) => (
   <div className="block">
@@ -24,5 +25,12 @@ const UtilityBlock = ({
     )}
   </div>
 );
+
+UtilityBlock.propTypes = {
+  data: PropTypes.string,
+  icon: PropTypes.string,
+  label: PropTypes.string,
+  sync: PropTypes.bool,
+};
 
 export default UtilityBlock;

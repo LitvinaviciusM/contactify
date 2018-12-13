@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Input = ({
+  icon,
   input,
   label,
+  name,
+  onChange,
   placeholder,
   type,
-  onChange,
-  name,
-  icon,
   variant,
 }) => (
   <div className={`input input--${variant}`}>
@@ -29,5 +30,16 @@ const Input = ({
     )}
   </div>
 );
+
+Input.propTypes = {
+  icon: PropTypes.string,
+  input: PropTypes.object,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  variant: PropTypes.string,
+};
 
 export default Input;

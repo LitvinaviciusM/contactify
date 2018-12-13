@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment';
 import UtilityBlock from './utilityblock';
 
 const UtilityPanel = ({ lastSynced }) => (
@@ -6,7 +8,7 @@ const UtilityPanel = ({ lastSynced }) => (
     <UtilityBlock
       icon="cloud-upload-alt"
       label="Last synced:"
-      data={lastSynced}
+      data={lastSynced ? moment(lastSynced).format('YYYY-MM-DD HH:mm:ss') : ''}
       sync
     />
     <UtilityBlock
@@ -16,5 +18,9 @@ const UtilityPanel = ({ lastSynced }) => (
     />
   </section>
 );
+
+UtilityPanel.propTypes = {
+  lastSynced: PropTypes.number,
+};
 
 export default UtilityPanel;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DataRow = ({ label, value, link }) => (
   <div className="sheet__row">
@@ -16,5 +17,11 @@ const DataRow = ({ label, value, link }) => (
     )}
   </div>
 );
+
+DataRow.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.string,
+  link: PropTypes.bool,
+};
 
 export default DataRow;

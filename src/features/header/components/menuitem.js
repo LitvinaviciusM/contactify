@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MenuItem = ({ option, icon }) => (
@@ -7,5 +8,10 @@ const MenuItem = ({ option, icon }) => (
     <span className="menu-item__name">{option}</span>
   </div>
 );
+
+MenuItem.propTypes = {
+  option: PropTypes.string,
+  icon: PropTypes.string,
+};
 
 export default MenuItem;

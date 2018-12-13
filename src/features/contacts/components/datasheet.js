@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DataRow from './datarow';
 import ContactPhoto from './contactphoto';
 import { FALLBACK_PROFILE_PIC } from '../../../common/constants';
@@ -39,5 +40,14 @@ const DataSheet = ({
     />
   </section>
 );
+
+DataSheet.propTypes = {
+  imgUrl: PropTypes.string,
+  city: PropTypes.string,
+  email: PropTypes.string,
+  name: PropTypes.string,
+  phone: PropTypes.string,
+  surname: PropTypes.string,
+};
 
 export default DataSheet;

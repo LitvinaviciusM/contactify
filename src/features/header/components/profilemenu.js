@@ -1,4 +1,5 @@
 import React  from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MenuPopup from './menupopup';
 
@@ -11,7 +12,7 @@ class ProfileMenu extends React.Component {
 
   render() {
     const { open } = this.state;
-    const { fullName = 'Test' } = this.props;
+    const { fullName } = this.props;
 
     return (
       <div className="header__profile-menu" onClick={this.handlePopupState}>
@@ -33,5 +34,9 @@ class ProfileMenu extends React.Component {
     );
   }
 }
+
+ProfileMenu.propTypes = {
+  fullName: PropTypes.string,
+};
 
 export default ProfileMenu;

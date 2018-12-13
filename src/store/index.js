@@ -1,9 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { reducer as form } from 'redux-form';
 import thunk from 'redux-thunk';
+import { app } from '../app/reducers';
 import { contacts, filter, profile } from '../features/contacts/reducers';
-
 const reducers = combineReducers({
+  app,
   contacts,
   filter,
   profile,

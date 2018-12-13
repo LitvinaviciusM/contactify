@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import Input from '../../../components/input';
 import Select from '../../../components/select';
@@ -58,6 +59,13 @@ const Filter = ({
     />
   </form>
 );
+
+Filter.propTypes = {
+  cityOptions: PropTypes.arrayOf(PropTypes.object),
+  handleSubmit: PropTypes.func,
+  resetFilter: PropTypes.func,
+  pristine: PropTypes.bool,
+};
 
 export default reduxForm({
   form: 'filter',

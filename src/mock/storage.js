@@ -1,6 +1,8 @@
+// Mock api
 import { startsWith } from 'lodash';
-import contacts from '../contacts';
+import contacts from './contacts';
 
+// Local storage serves as DB
 export const initStore = () => {
   localStorage.setItem('contacts', JSON.stringify(contacts));
 };
@@ -31,9 +33,9 @@ const filterContacts = specs => {
   return contacts;
 };
 
-export const getFilteredContacts = filter => new Promise(resolve => {
+export const getFilteredContacts = specs => new Promise(resolve => {
   setTimeout(() => resolve({
     status: 200,
-    response: filterContacts(filter),
+    response: filterContacts(specs),
   }), 1000)
 });

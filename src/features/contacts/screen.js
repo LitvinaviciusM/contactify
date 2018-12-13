@@ -1,7 +1,8 @@
 import React from 'react';
-import Table from '../../components/table';
+import PropTypes from 'prop-types';
 import DataSheet from './components/datasheet';
 import Filter from './components/filter';
+import Table from '../../components/table';
 import { getTableColumns } from './utils';
 
 class Contacts extends React.Component {
@@ -67,5 +68,15 @@ class Contacts extends React.Component {
     );
   }
 }
+
+Contacts.propTypes = {
+  cityOptions: PropTypes.arrayOf(PropTypes.object),
+  contacts: PropTypes.arrayOf(PropTypes.object),
+  filterContacts: PropTypes.func,
+  profile: PropTypes.object,
+  resetFilter: PropTypes.func,
+  selectContact: PropTypes.func,
+  initContacts: PropTypes.func,
+};
 
 export default Contacts;

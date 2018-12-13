@@ -1,5 +1,5 @@
 import { contactsActionTypes } from '../../common/constants';
-import { getContacts, getFilteredContacts } from '../../common/storage';
+import { getContacts, getFilteredContacts } from '../../mock/storage';
 import { getCityOptions } from './utils';
 
 export const filterContacts = values => async dispatch => {
