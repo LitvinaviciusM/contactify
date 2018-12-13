@@ -1,4 +1,5 @@
-.select-wrapper {
+.select {
+  border: 1px solid $c-black;
   position: relative;
 
   &--filter-city {
@@ -10,30 +11,31 @@
     min-width: 180px;
     overflow: hidden;
   }
-}
 
-.select {
-  cursor: pointer;
+  &__field {
+    cursor: pointer;
 
-  &--filter-city {
-    background: transparent;
-    width: 100%;
+    &--filter-city {
+      background: transparent;
+      width: 100%;
+    }
   }
-}
 
-.icon-wrapper {
-  position: absolute;
-
-  &--filter-city {
-    background-color: $c-white;
+  &__icon {
     position: absolute;
-    right: 4px;
-    top: 9px;
-    width: 15px;
 
-    svg {
-      path {
-        fill: $c-dark-grey;
+    &--filter-city {
+      background-color: $c-white;
+      height: 32px;
+      position: absolute;
+      right: 4px;
+      top: 9px;
+      width: 15px;
+
+      svg {
+        path {
+          fill: $c-dark-grey;
+        }
       }
     }
   }

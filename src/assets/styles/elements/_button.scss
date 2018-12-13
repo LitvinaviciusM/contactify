@@ -30,10 +30,10 @@
     $variantHoverTextColor: nth($variantValues, 9);
 
     &--#{$variantKey} {
-      transition: background-color ease 0.3s, border-color ease 0.3s, color 0.3s ease;
       background-color: $variantBgColor;
       border: 1px solid $variantBorderColor;
       color: $variantTextColor;
+      transition: background-color ease 0.3s, border-color ease 0.3s, color 0.3s ease;
 
       &:hover {
         background-color: $variantHoverBgColor;

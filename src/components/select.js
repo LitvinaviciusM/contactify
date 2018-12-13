@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Select = ({
   input,
-  className,
   name,
   onChange,
   options,
@@ -11,17 +10,16 @@ const Select = ({
   variant,
   icon,
 }) => (
-  <div className={`select-wrapper select-wrapper--${variant}`}>
+  <div className={`select select--${variant}`}>
     <select
       {...input ? input : { onChange, name }}
-      className={`select select--${variant}`}
+      className={`select__field select__field--${variant}`}
     >
       { placeholder && (
         <option value="" disabled hidden>{placeholder}</option>
       )}
       { options.map(o => (
         <option
-          className={`select__option select__option--${variant}`}
           key={o.value}
           value={o.value}
         >
@@ -30,8 +28,8 @@ const Select = ({
       ))}
     </select>
     {icon && (
-      <div className={`icon-wrapper icon-wrapper--${variant}`}>
-        <FontAwesomeIcon className={`input input--${variant}`} icon={icon} />
+      <div className={`select__icon select__icon--${variant}`}>
+        <FontAwesomeIcon icon={icon} />
       </div>
     )}
   </div>

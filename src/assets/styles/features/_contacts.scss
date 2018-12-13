@@ -36,7 +36,6 @@
   }
 
   &__main {
-    align-items: stretch;
     display: flex;
 
     .sheet {
@@ -47,11 +46,13 @@
       margin: $l-leading * 1.5 $l-gutter 0 0;
 
       &__image-wrapper {
-        height: 180px;
+        $size: 180px;
+        height: $size;
         margin: 0 auto $l-leading;
-        width: 180px;
+        width: $size;
 
         img {
+          border-radius: 50%;
           height: 100%;
           width: 100%;
         }
@@ -72,10 +73,10 @@
 
         .value {
           flex: 1;
-          width: 140px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          width: 140px;
 
           &:not(a) {
             color: $c-dark-grey;

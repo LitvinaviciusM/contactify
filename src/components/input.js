@@ -11,21 +11,21 @@ const Input = ({
   icon,
   variant,
 }) => (
-  <div className={`input-wrapper input-wrapper--${variant}`}>
+  <div className={`input input--${variant}`}>
     <input
       {...input ? input : { onChange, name }}
-      className={`input input--${variant}`}
       id={input ? input.name : name}
       placeholder={placeholder}
       type={type}
+      className={`input__field input__field--${variant}`}
     />
     {icon && (
-      <div className={`icon-wrapper icon-wrapper--${variant}`}>
-        <FontAwesomeIcon className={`input input--${variant}`} icon={icon} />
+      <div className="input__icon">
+        <FontAwesomeIcon icon={icon} />
       </div>
     )}
     {label && (
-      <label htmlFor={input.name}>{label}</label>
+      <label className="input__label" htmlFor={input.name}>{label}</label>
     )}
   </div>
 );
